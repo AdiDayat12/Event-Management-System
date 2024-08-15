@@ -41,6 +41,7 @@ public class ConnectionUtil {
             config.setMaximumPoolSize(10);
             config.setMinimumIdle(5);
             config.setMaxLifetime(60_000 * 10);
+            config.setConnectionTimeout(60_000 * 10);
 
             dataSource = new HikariDataSource(config);
         } else {
