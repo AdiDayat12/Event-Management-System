@@ -33,7 +33,7 @@ public class ConnectionUtil {
         if (isLoaded){
             HikariConfig config = new HikariConfig();
 
-            config.setDriverClassName("driver");
+            config.setDriverClassName(properties.getProperty("driver"));
             config.setJdbcUrl(properties.getProperty("url"));
             config.setUsername(properties.getProperty("username"));
             config.setPassword(properties.getProperty("pass"));
